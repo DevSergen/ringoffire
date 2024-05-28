@@ -3,14 +3,18 @@ import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Game } from '../../models/game';
 import { PlayerComponent } from '../player/player.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [NgFor, CommonModule, PlayerComponent],
+  imports: [NgFor, CommonModule, PlayerComponent, MatIconModule, MatButtonModule,],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })
+
+
 export class GameComponent implements OnInit {
   pickCardAnimation = false;
   currentCard: string | undefined = '';
